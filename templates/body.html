@@ -1,0 +1,55 @@
+{{ define "body" }}
+{{ template "header" }}
+
+<body>
+    <div class="container">
+        <h1>Поиск автомобилей</h1>
+        
+        
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="brand">Марка:</label>
+                <select id="brand" name="brand" required>
+                    <option value="" disabled selected>Выберите марку</option>
+                    {{ range .Brands }}
+                    <option value="{{ .ID }}">{{ .Name }}</option>
+                    {{ end }}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="model">Модель:</label>
+                <select id="model" name="model" disabled>
+                    <option value="">Сначала выберите марку</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="year">Год выпуска:</label>
+                <input type="number" id="year" name="year" placeholder="Год">
+            </div>
+            
+            <div class="form-group">
+                <label for="price">Цена до (тыс. руб.):</label>
+                <input type="number" id="price" name="price" placeholder="Цена">
+            </div>
+            
+            <button type="submit">Поиск</button>
+        </form>
+        
+        <div id="results">
+            <!-- здесь будут результаты поиска -->
+        </div>
+    </div>
+
+    <script id="models-data" type="application/json">
+        {{ .Models | json }}
+    </script>
+    
+    
+    <script src="/static/js/models_label.js"></script>
+    <script src="/static/js/search.js"></script>
+
+</body>
+</html>
+{{ end }}

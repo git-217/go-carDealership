@@ -1,0 +1,171 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Стили формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #6fc953;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    background-color: #6fc953;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #61b149;
+}
+
+/* Стили таблицы с результатами */
+#results {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    font-size: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow-x: auto;
+    overflow-y: auto;
+    
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #6fc953;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ecf0f1;
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #f1f7fd;
+}
+
+
+td:nth-child(1) { 
+    min-width: 100px;
+    font-weight: 500;
+}
+
+td:nth-child(2) { 
+    min-width: 130px;
+}
+
+td:nth-child(3) {
+    min-width: 70px;
+    text-align: center;
+}
+
+td:nth-child(4) {
+    min-width: 100px;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    color: #532e3e;
+    font-weight: 500;
+}
+
+/* Сообщения */
+.message, .error {
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.message {
+    background-color: #e8f8f5;
+    color: #157c40;
+}
+
+.error {
+    background-color: #fdecea;
+    color: #e74c3c;
+}
+
+/* Ошибки валидации */
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+select:invalid {
+    border-color: #e74c3c;
+}
