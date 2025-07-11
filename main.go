@@ -53,7 +53,6 @@ func connectDB(ctx context.Context) (*pgx.Conn, error) {
 	if err != nil {
 		return nil, fmt.Errorf("ошибка подключения к базе данных: %v", err)
 	}
-	fmt.Println("Подключение установлено")
 	return conn, nil
 }
 
@@ -111,7 +110,7 @@ func SearchCars(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Ошибка подключения к БД: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
-	defer conn.Close(context.Background())
+	defer conn.Close(ctx)
 
 	brandID := r.URL.Query().Get("brand")
 	modelID := r.URL.Query().Get("model")

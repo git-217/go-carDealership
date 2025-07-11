@@ -25,7 +25,6 @@ h1 {
     font-weight: 600;
 }
 
-/* Стили формы */
 .form-group {
     margin-bottom: 20px;
 }
@@ -70,7 +69,6 @@ button:hover {
     background-color: #61b149;
 }
 
-/* Стили таблицы с результатами */
 #results {
     margin-top: 30px;
     overflow-x: auto;
@@ -88,7 +86,6 @@ table {
     overflow-x: auto;
     overflow-y: auto;
     
-    overflow: hidden;
 }
 
 thead tr {
@@ -136,7 +133,7 @@ td:nth-child(4) {
     min-width: 100px;
     text-align: right;
     font-family: 'Courier New', Courier, monospace;
-    color: #532e3e;
+    color: #462734;
     font-weight: 500;
 }
 
@@ -158,7 +155,6 @@ td:nth-child(4) {
     color: #e74c3c;
 }
 
-/* Ошибки валидации */
 .error-message {
     color: #e74c3c;
     font-size: 13px;
